@@ -7,7 +7,7 @@ import { ElevenLabsClient } from '@elevenlabs/elevenlabs-js';
 const VOICE_NAME = 'Edward Sims';
 const MODEL_ID = 'eleven_v3';
 const OUTPUT_FORMAT = 'mp3_44100_128';
-const CACHE_DIR = path.join(import.meta.dirname, 'audio_cache');
+export const CACHE_DIR = path.join(import.meta.dirname, 'audio_cache');
 const INDEX_FILE = 'index.json';
 
 export interface AudioCacheEntry {

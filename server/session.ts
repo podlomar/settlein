@@ -62,7 +62,38 @@ const loadSession = async (id: string): Promise<Session> => {
   return session;
 };
 
+// Session ids become path segments, so anything that could climb out of SESSIONS_DIR
+// (dots, slashes) is rejected before it ever reaches the filesystem.
+const isSafeId = (id: string): boolean => /^[a-zA-Z0-9_-]+$/.test(id);
+
 export const isSpeechStep = (step: ScriptStep): step is SpeechStep => 'speech' in step;
+
+// Returns null when the session has no generated manifest yet; throws only when one
+// exists but cannot be read as JSON.
+export const loadManifest = async (id: string): Promise<SessionManifest | null> => {
+  if (!isSafeId(id)) {
+    return null;
+  }
+
+  const source = path.join(SESSIONS_DIR, id, 'manifest.json');
+
+  let contents: string;
+  try {
+    contents = await readFile(source, 'utf8');
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      return null;
+    }
+
+    throw error;
+  }
+
+  try {
+    return JSON.parse(contents) as SessionManifest;
+  } catch (cause) {
+    throw new Error(`${source} is not valid JSON. Re-run "npm run gen -- ${id}".`, { cause });
+  }
+};
 
 export const processSession = async (id: string): Promise<SessionManifest> => {
   const session = await loadSession(id);
@@ -87,7 +118,7 @@ export const processSession = async (id: string): Promise<SessionManifest> => {
       const file = await synthesizer.synthesize(step.speech);
       manifest.sections.push({
         type: 'narration',
-        file: file.file,
+        file: `/assets/narrations/${file.file}`,
         text: step.speech,
         length: file.length,
       });

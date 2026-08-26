@@ -1,38 +1,42 @@
 import express from 'express';
 import type { ErrorRequestHandler } from 'express';
-import type { SessionManifest } from './types.js';
+import { loadManifest } from './session.js';
+import { CACHE_DIR } from './synth.js';
 
 const PORT = Number(process.env.PORT ?? 3000);
-
-// Stands in for the real session endpoints until they exist, so the client has
-// something with the right shape to develop against.
-const MOCK_MANIFEST: SessionManifest = {
-  background: { file: 'bg.mp3' },
-  sections: [
-    {
-      type: 'narration',
-      file: '246b49e9.mp3',
-      text: 'Settle in. Let your shoulders drop, and take one slow breath.',
-      length: 4.56,
-    },
-    { type: 'silence', length: 15 },
-    {
-      type: 'narration',
-      file: 'ba67e2b9.mp3',
-      text: 'Notice the weight of your body where it meets the floor.',
-      length: 2.8,
-    },
-    { type: 'silence', length: 15 },
-  ],
-};
 
 const app = express();
 
 app.use(express.json());
 
-app.get('/api/mock', (_req, res) => {
-  res.json(MOCK_MANIFEST);
+app.get('/api/sessions/:id', async (req, res) => {
+  const { id } = req.params;
+  const manifest = await loadManifest(id);
+
+  if (manifest === null) {
+    res.status(404).json({ error: `No manifest for session "${id}".` });
+    return;
+  }
+
+  res.json(manifest);
 });
+
+// Only the audio is public: the cache's index.json is internal bookkeeping.
+app.use('/assets/narrations', (req, res, next) => {
+  if (!req.path.endsWith('.mp3')) {
+    res.status(404).json({ error: 'Not found' });
+    return;
+  }
+
+  next();
+});
+
+// Cache file names are content hashes, so the bytes behind a given URL never change
+// and the response can be cached indefinitely.
+app.use(
+  '/assets/narrations',
+  express.static(CACHE_DIR, { index: false, immutable: true, maxAge: '1y' }),
+);
 
 app.use((_req, res) => {
   res.status(404).json({ error: 'Not found' });
