@@ -1,0 +1,183 @@
+{
+  "background": {
+    "file": "bg.mp3"
+  },
+  "sections": [
+    {
+      "type": "narration",
+      "file": "973115b6.mp3",
+      "text": "Good morning. You don't have to do anything for the next few minutes, and there's no way to do this wrong. This isn't part of the day yet — it's the bit before the day, which is a different thing. Nobody needs anything from you while this is playing. Whatever you were about to start, it can wait. For now it's just you and a body that was asleep a few minutes ago.",
+      "length": 25.04
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "a6545817.mp3",
+      "text": "Wherever you are is fine. Still in bed, sitting on the edge of it, on the floor, standing somewhere. If you want to shift into something more comfortable, do that now.",
+      "length": 10.88
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "5416478e.mp3",
+      "text": "Waking up takes a while. Not a few seconds — a while. If you feel heavy or foggy, that's just your body still coming back.",
+      "length": 9.04
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "ebb725d2.mp3",
+      "text": "Feel your own weight. Wherever you're resting — the mattress, a chair, your feet on the floor — something is holding you up.",
+      "length": 9.922
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "000ee3ac.mp3",
+      "text": "Notice the air on your face and your hands. Warm, cool, dry, whatever it is.",
+      "length": 6.56
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "fb4d1bd9.mp3",
+      "text": "See how far down the waking has got. Your legs, your feet. Some of you is further along than the rest.",
+      "length": 8.4
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "30407e2c.mp3",
+      "text": "Check your neck and your shoulders. Your jaw. Not to fix anything — just to see how they turned out this morning.",
+      "length": 8.24
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "cfcaceb3.mp3",
+      "text": "If something wants stretching, stretch it. Take as long as you like over it.",
+      "length": 6.72
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "c8249c42.mp3",
+      "text": "And if you'd rather not move at all, don't. Staying still is also a way of waking up.",
+      "length": 8.64
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "77443323.mp3",
+      "text": "Your hands are usually the warmest thing available. If somewhere wants a hand on it, put one there.",
+      "length": 6.48
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "503d9e75.mp3",
+      "text": "Your breathing is already working. It got you through the whole night without supervision. Nothing about it needs changing.",
+      "length": 7.28
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "21eba8c9.mp3",
+      "text": "See where you feel it most — chest, ribs, belly, the air at your nose. Just where, that's all.",
+      "length": 9.12
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "579ba214.mp3",
+      "text": "Let your face go. Forehead, eyes, jaw, tongue. Most of us hold something there without noticing.",
+      "length": 10.96
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "b83aca00.mp3",
+      "text": "If there's light in the room, let your eyes adjust to it slowly. Open them more, or close them again — no rush either way.",
+      "length": 10.08
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "c4ec4f39.mp3",
+      "text": "Let the sounds in. The street, the kitchen, someone else moving around. None of it needs anything from you.",
+      "length": 8.32
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "7031585b.mp3",
+      "text": "Whatever you do next, do it slower than usual. Slower than feels necessary.",
+      "length": 5.52
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "42c23bb8.mp3",
+      "text": "When you're ready, let something move first. A hand, your feet, your eyes. Take your time getting up.",
+      "length": 8.16
+    },
+    {
+      "type": "silence",
+      "length": 15
+    },
+    {
+      "type": "narration",
+      "file": "099c99aa.mp3",
+      "text": "Good morning.",
+      "length": 0.64
+    }
+  ]
+}

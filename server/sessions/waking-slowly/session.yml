@@ -1,0 +1,39 @@
+id: "waking-slowly"
+name: "Waking slowly"
+brief: "A gentle transition from sleep into the day, helping you wake up slowly without rushing or trying to change anything"
+script: 
+  - speech: "Good morning. You don't have to do anything for the next few minutes, and there's no way to do this wrong. This isn't part of the day yet — it's the bit before the day, which is a different thing. Nobody needs anything from you while this is playing. Whatever you were about to start, it can wait. For now it's just you and a body that was asleep a few minutes ago."
+  - pause: 15
+  - speech: "Wherever you are is fine. Still in bed, sitting on the edge of it, on the floor, standing somewhere. If you want to shift into something more comfortable, do that now."
+  - pause: 15
+  - speech: "Waking up takes a while. Not a few seconds — a while. If you feel heavy or foggy, that's just your body still coming back."
+  - pause: 15
+  - speech: "Feel your own weight. Wherever you're resting — the mattress, a chair, your feet on the floor — something is holding you up."
+  - pause: 15
+  - speech: "Notice the air on your face and your hands. Warm, cool, dry, whatever it is."
+  - pause: 15
+  - speech: "See how far down the waking has got. Your legs, your feet. Some of you is further along than the rest."
+  - pause: 15
+  - speech: "Check your neck and your shoulders. Your jaw. Not to fix anything — just to see how they turned out this morning."
+  - pause: 15
+  - speech: "If something wants stretching, stretch it. Take as long as you like over it."
+  - pause: 15
+  - speech: "And if you'd rather not move at all, don't. Staying still is also a way of waking up."
+  - pause: 15
+  - speech: "Your hands are usually the warmest thing available. If somewhere wants a hand on it, put one there."
+  - pause: 15
+  - speech: "Your breathing is already working. It got you through the whole night without supervision. Nothing about it needs changing."
+  - pause: 15
+  - speech: "See where you feel it most — chest, ribs, belly, the air at your nose. Just where, that's all."
+  - pause: 15
+  - speech: "Let your face go. Forehead, eyes, jaw, tongue. Most of us hold something there without noticing."
+  - pause: 15
+  - speech: "If there's light in the room, let your eyes adjust to it slowly. Open them more, or close them again — no rush either way."
+  - pause: 15
+  - speech: "Let the sounds in. The street, the kitchen, someone else moving around. None of it needs anything from you."
+  - pause: 15
+  - speech: "Whatever you do next, do it slower than usual. Slower than feels necessary."
+  - pause: 15
+  - speech: "When you're ready, let something move first. A hand, your feet, your eyes. Take your time getting up."
+  - pause: 15
+  - speech: "Good morning."

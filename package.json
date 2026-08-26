@@ -5,11 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "gen": "tsx generator/index.ts",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/node": "^26.3.0",
+    "tsx": "^4.23.12",
     "typescript": "^7.0.2",
     "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "@elevenlabs/client": "^1.22.0",
+    "@elevenlabs/elevenlabs-js": "^2.65.0",
+    "yaml": "^2.9.0"
   }
 }
