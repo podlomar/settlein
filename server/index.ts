@@ -1,9 +1,12 @@
+import { existsSync } from 'node:fs';
+import path from 'node:path';
 import express from 'express';
 import type { ErrorRequestHandler } from 'express';
 import { loadManifest } from './session.js';
 import { CACHE_DIR } from './synth.js';
 
 const PORT = Number(process.env.PORT ?? 3000);
+const CLIENT_DIR = path.join(import.meta.dirname, '..', 'client', 'dist');
 
 const app = express();
 
@@ -38,6 +41,9 @@ app.use(
   express.static(CACHE_DIR, { index: false, immutable: true, maxAge: '1y' }),
 );
 
+// The built client, mounted last so it can never shadow an API or audio route.
+app.use(express.static(CLIENT_DIR));
+
 app.use((_req, res) => {
   res.status(404).json({ error: 'Not found' });
 });
@@ -51,4 +57,8 @@ app.use(handleError);
 
 app.listen(PORT, () => {
   console.log(`settlein server listening on http://localhost:${PORT}`);
+
+  if (!existsSync(CLIENT_DIR)) {
+    console.warn(`No client build at ${CLIENT_DIR} — run "npm run build" in client/.`);
+  }
 });
